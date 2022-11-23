@@ -15,6 +15,14 @@ Since this is primarily an infrastructure issue DDD experts (@ardalis) suggest i
 
 A series of interfaces and generic repositories can be created to effectively manage this.
 
+Normally, the domain entity an implementation of a document repository would already exist.
+
+To use this approach the following additional classes would need to be created:
+- A document representation of the domain entity that can work with CosmosDb correctly, e.g. `InvitationDocument`
+- A strongly typed implementation of IMapper<T,D> that will handle the proper mapping back and forth, e.g. `IMapper<Invitation,InvitationDocument`
+- A marker interface that implements the generic IMappingRepository<T,D> (a one liner), e.g. `IInvitationRepository`
+- A class that inherits from `GenericMappingRepositoryBase` and implements the marker interface above (basically just a constructor), e.g. `InvitationRepository`
+
 This example shows have I've done this.
 
 Given that I swim in the shallow end of the coding pool, I'm pretty sure there are better ways to accomplish this.
