@@ -15,7 +15,7 @@ Since this is primarily an infrastructure issue DDD experts (@ardalis) suggest i
 
 A series of interfaces and generic repositories can be created to effectively manage this.
 
-Normally, the domain entity an implementation of a document repository would already exist.
+This example presupposes that an implementation of a document repository would already exist.
 
 To use this approach the following additional classes would need to be created:
 - A document representation of the domain entity that can work with CosmosDb correctly, e.g. `InvitationDocument`
