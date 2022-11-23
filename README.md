@@ -7,7 +7,7 @@ Following a domain driven design approach (DDD) suggests that collection propert
 
 When using Entity Framework Core (EF Core) for a relational database this works just fine.  But when using EF Core for a document database (CosmosDb) the entity is serialized and deserialized using `System.Text.Json` on its way to and from the store.  
 
-And as it turns out, `System.Text.Json` will not populate a readonly collection unless it finds a constructor that uses `public` or `init` setters.  No bueno.
+And as it turns out, `System.Text.Json` will not populate a readonly collection unless it finds a constructor that uses `public` or `init` setters.  And that breaks the encapsulation we set up for the collection inside the entity.  No bueno.
 
 ## A Reasonable Solution
 
