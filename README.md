@@ -13,7 +13,7 @@ And as it turns out, `System.Text.Json` will not populate a readonly collection 
 
 Since this is primarily an infrastructure issue DDD experts (@ardalis) suggest introducing a mapping functionality in that layer, thereby insulating the core domain project from any knowledge about storage concerns.  With a bit of additional work it's even possible to insulate the API layer from knowing about storage issues as well.
 
-To do this, a series of interfaces and generic repositories can be created to effectively manage this.
+A series of interfaces and generic repositories can be created to effectively manage this.
 
 This example shows have I've done this.
 
