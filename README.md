@@ -1,7 +1,7 @@
 # GenericMappingRepositoryExperiments
 This sample was created to solve a very specific problem - a problem which may not exist by the time you read this.
 
-## The Probledm We're Trying To Solve
+## The Problem We're Trying To Solve
 
 Following a domain driven design approach (DDD) suggests that collection properties inside domain entities should be readonly.  In fact, to update the contents of a collection specific methods to do just that have to be created, e.g. `AddEItem`, `RemoveItem` and so on.  This leaves the entity in full control of the collection, as it should be.
 
